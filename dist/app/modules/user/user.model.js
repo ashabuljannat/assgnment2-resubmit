@@ -19,15 +19,11 @@ const config_1 = __importDefault(require("../../config"));
 const userFullNameSchema = new mongoose_1.Schema({
     firstName: {
         type: String,
-        required: [true, 'First Name is required'],
-        trim: true,
-        maxlength: [10, 'Name can not be more than 10 characters'],
+        required: [true, 'First Name is required']
     },
     lastName: {
         type: String,
         trim: true,
-        required: [true, 'Last Name is required'],
-        maxlength: [10, 'Name can not be more than 10 characters'],
     },
 });
 const addressSchema = new mongoose_1.Schema({
@@ -63,13 +59,11 @@ const userSchema = new mongoose_1.Schema({
     username: {
         type: String,
         unique: true,
-        required: [true, 'UserName is required'],
-        maxlength: [10, 'username can not be more than 10 characters'],
+        required: [true, 'UserName is required']
     },
     password: {
         type: String,
         required: [true, 'Password is required'],
-        maxlength: [20, 'Password can not be more than 20 characters'],
         select: false,
     },
     fullName: {
@@ -90,8 +84,7 @@ const userSchema = new mongoose_1.Schema({
     age: { type: Number, required: [true, 'age is required'] },
     email: {
         type: String,
-        required: [true, 'Email is required'],
-        unique: true,
+        required: [true, 'Email is required']
     },
     isActive: {
         type: String,
