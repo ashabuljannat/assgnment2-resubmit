@@ -28,7 +28,7 @@ export type User = {
   isActive: 'active' | 'inactive';
   address: Address;
   hobbies: string[];
-  orders: Order[];
+  orders?: Order[];
 };
 
 export interface UserModel extends Model<User> {
