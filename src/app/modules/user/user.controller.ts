@@ -143,13 +143,13 @@ const updateUser = async (req: Request, res: Response) => {
 const addNewOrder = async (req: Request, res: Response) => {
   try {
     const { userId } = req.params;
-    const { orders } = req.body;
+    const  orders  = req.body;
     const result = await UserServices.addOrderToDB(userId, orders);
 
     if (result === null) {
       res.status(500).json({
         success: false,
-        message: `User id ${userId} not found`,
+        message: `For id ${userId} Order add failed`,
         error: {
           code: 404,
           description: 'User not found!',

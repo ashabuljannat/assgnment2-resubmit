@@ -42,7 +42,7 @@ const deleteUserFromDB = async (id: any) => {
   return result;
 };
 
-const updateUserFromDB = async (id: any, updateData: any) => {
+const updateUserFromDB = async (id: any, updateData: any) => { 
   if (!Users.isUserNotExists(id)) {
     throw new Error('User not found');
   }

@@ -154,12 +154,12 @@ const updateUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
 const addNewOrder = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { userId } = req.params;
-        const { orders } = req.body;
+        const orders = req.body;
         const result = yield user_service_1.UserServices.addOrderToDB(userId, orders);
         if (result === null) {
             res.status(500).json({
                 success: false,
-                message: `User id ${userId} not found`,
+                message: `For id ${userId} Order add failed`,
                 error: {
                     code: 404,
                     description: 'User not found!',
