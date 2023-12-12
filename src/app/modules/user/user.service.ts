@@ -47,7 +47,7 @@ const updateUserFromDB = async (id: any, updateData: any) => {
     throw new Error('User not found');
   }
   const result = await Users.updateOne({ userId: id }, updateData);
-  console.log(result);
+  // console.log(result);
   if (result.matchedCount === 1) {
     if (result.modifiedCount === 1) {
       return 'update';

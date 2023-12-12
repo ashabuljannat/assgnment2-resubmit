@@ -92,12 +92,8 @@ const userSchema = new Schema<User, UserModel>({
   },
 
   isActive: {
-    type: String,
-    enum: {
-      values: ['active', 'inactive'],
-      message: '{VALUE} is not a valid status',
-    },
-    default: 'active',
+    type: Boolean,
+    default: false,
   },
 });
 

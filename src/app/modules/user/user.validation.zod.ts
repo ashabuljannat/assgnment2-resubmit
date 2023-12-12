@@ -21,7 +21,7 @@ export const userJoiValidationSchema = z.object({
   age: z.number(),
   orders: z.any(),
   hobbies: z.any(),
-  isActive: z.enum(['active', 'inactive']).default('active'),
+  isActive: z.boolean(),
 });
 
 export default userJoiValidationSchema;

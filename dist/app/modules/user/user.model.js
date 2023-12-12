@@ -87,12 +87,8 @@ const userSchema = new mongoose_1.Schema({
         required: [true, 'Email is required']
     },
     isActive: {
-        type: String,
-        enum: {
-            values: ['active', 'inactive'],
-            message: '{VALUE} is not a valid status',
-        },
-        default: 'active',
+        type: Boolean,
+        default: false,
     },
 });
 userSchema.pre('save', function (next) {

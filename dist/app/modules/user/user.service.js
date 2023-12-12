@@ -57,7 +57,7 @@ const updateUserFromDB = (id, updateData) => __awaiter(void 0, void 0, void 0, f
         throw new Error('User not found');
     }
     const result = yield user_model_1.Users.updateOne({ userId: id }, updateData);
-    console.log(result);
+    // console.log(result);
     if (result.matchedCount === 1) {
         if (result.modifiedCount === 1) {
             return 'update';

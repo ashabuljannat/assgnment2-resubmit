@@ -21,6 +21,6 @@ exports.userJoiValidationSchema = zod_1.z.object({
     age: zod_1.z.number(),
     orders: zod_1.z.any(),
     hobbies: zod_1.z.any(),
-    isActive: zod_1.z.enum(['active', 'inactive']).default('active'),
+    isActive: zod_1.z.boolean(),
 });
 exports.default = exports.userJoiValidationSchema;
